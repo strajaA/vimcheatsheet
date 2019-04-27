@@ -1,0 +1,64 @@
+   _____ _    _ ______       _______ _____ _    _ ______ ______ _______ 
+  / ____| |  | |  ____|   /\|__   __/ ____| |  | |  ____|  ____|__   __|
+ | |    | |__| | |__     /  \  | | | (___ | |__| | |__  | |__     | |   
+ | |    |  __  |  __|   / /\ \ | |  \___ \|  __  |  __| |  __|    | |   
+ | |____| |  | | |____ / ____ \| |  ____) | |  | | |____| |____   | |   
+  \_____|_|  |_|______/_/    \_\_| |_____/|_|  |_|______|______|  |_|   by straja 
+                                                                      
+
+
+
+--MOVEMENT--
+H-move to top of screen
+M-move to middle of screen
+L-move to bottom of screen
+w-jump forwards to the start of a word
+b-jump backwards to the start of a word
+e-jump forwards to the end of a word
+%-move to matching characther(default supported: "()", "{}, "[]"
+f<char>-find a charachter forward in a line and move to it
+t<char>-find a charachter forward in a line and move until it (one charachter before)
+;-repeat previous f or t command
+<line number>+G-go to a given line number
+
+--EDITING--
+r-replace a charachter
+cc-change(replace) entire line(alose ci+( would change what was inside of () and we can do this for {} [] "" ....)
+C-change to the end of the line
+u-undo
+CTRL+r-redo
+.-repeat last command
+
+--MARKING--
+v-enter viusal mode(mark text and then do a command like "d")
+esc-exit visual mode
+
+--VISUAL COMMANDS--
+>-shift text right
+<-shift text left
+d-delete marked text
+y-copy marked text
+
+--CUT AND PASTE--
+yy-copy a line
+yw-copy the charachters of the word from the cursor position to the start of the next word
+y$-copy to the end of line
+p-put before cursor
+dd-delete entire line
+dw-delete the characters of the word from the cursor position to the start of the next word(dt+, will delete anything until we reach , if we were to be in a middle of a word and wanted to delete it we could use diw("delete in word)", or if we wanted to delete a paragraph we would use dap)
+D-delete to the end of line
+x-delete charachter
+
+--INSERT MODE--
+a-insert(append) after the cursor
+
+--SEARCH AND REPLACE--
+/pattern - search for pattern
+n - repeat search in same direction
+:%s/old/new/g - replace all old with new throughout file
+:%s/old/new/gc - replace all old with new throughout file with confirmations
+
+
+!DISCLAIMER!
+all resources taken from :https://vim.rtorr.com/
+			  https://thoughtbot.com
